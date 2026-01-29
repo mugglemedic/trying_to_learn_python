@@ -65,10 +65,10 @@ def magic_eight_ball():
         case 9:
             print(nine)
 
-
+# This was mostly AI 
 while True:
-    magic_eight_ball()  # Run the game
+    magic_eight_ball() 
     redo = input('\nWould you like to go again? (y/n) ')
-    if redo.lower() != 'y':
-        print('Thanks for playing!')
+    if redo.lower() != 'y': # didn't even occur to me to make this lower case.
+        print('Thanks! Have a mystical day!')
         break
