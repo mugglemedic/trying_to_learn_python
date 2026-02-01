@@ -90,13 +90,15 @@ def print_words(filename):
 
     for word in sorted(word_dict.keys()):
         print(word, word_dict[word])
-        maybe = word, word_dict[word]
     return
 
 
 def print_top(filename):
-    items = sorted(word_count_dict(filename), reverse=True)
-    print(print_words)
+    count = word_count_dict(filename)
+    items = sorted(count.items(), key=lambda x: x[1], reverse=True)
+
+    for word, counts in items[:20]:
+        print(word, counts)
 
 
 if __name__ == '__main__':
